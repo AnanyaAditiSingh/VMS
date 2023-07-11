@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/imgs/logo.png";
-import "/Users/mac/Desktop/VMS/react/frontend-backend/ABS_VMS/src/pages/VA/VA.css";
+import "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/pages/VA/VA.css";
 import dummyData from './dummyData.json';
 
 const AddStream = () => {
