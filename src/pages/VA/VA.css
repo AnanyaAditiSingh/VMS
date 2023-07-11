@@ -263,17 +263,18 @@ body {
     .divider {
       border-top: 2px solid #486BAB;
       margin-top: 150px; /* Increase this value to move the divider lower */
-      margin-bottom: 20px; /* Optional: Adjust the bottom margin as needed */
+      margin-bottom: 0px; /* Optional: Adjust the bottom margin as needed */
       margin-left: 245px;
     }
 
     .database-table {
       margin: 0 10px;
       overflow-y: auto;
+      max-height: 640px; /* Adjust the value based on your requirements */
     }
     
     .database-table table {
-      width: 90%; /* Adjust the value based on your sidebar width */
+      width: 90%;
       margin-left: 245px;
       margin-right: 100px;
       border-collapse: collapse;
@@ -281,29 +282,28 @@ body {
     }
     
     .database-table th {
-      background-color: #486BAB; /* Heading row color */
+      background-color: #486BAB;
       color: #fff;
       font-weight: bold;
       padding: 10px;
-      text-align: center; /* Center align the content */
+      text-align: center;
     }
     
     .database-table td {
-      background-color: #add2fc; /* Light blue row color */
+      background-color: #abb4be;
       padding: 10px;
-      border-bottom: 1px solid #486BAB; /* Dark blue border */
-      text-align: center; /* Center align the content */
+      border-bottom: 1px solid #486BAB;
+      text-align: center;
     }
     
     .database-table th:last-child {
-      border-right: 2px solid #061737; /* Add a border on the right side of the last heading column */
+      border-right: 2px solid #061737;
     }
     
     .database-table td:last-child {
-      border-right: 2px solid #061737; /* Add a border on the right side of the last column */
+      border-right: 2px solid #061737;
     }
     
     .database-table-container {
-      max-height: 400px; /* Adjust the value based on your requirements */
-    }
-        
+      overflow: hidden;
+    }    

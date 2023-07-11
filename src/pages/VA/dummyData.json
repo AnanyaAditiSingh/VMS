@@ -96,6 +96,48 @@
       "cameraName": "Camera Name 14",
       "process": "Process 14",
       "dateTime": "YYYY-MM-DD/00:00:00-14"
+    },
+    {
+        "serialNumber": 15,
+        "image": "Image 15",
+        "cameraName": "Camera Name 15",
+        "process": "Process 15",
+        "dateTime": "YYYY-MM-DD/00:00:00-15"
+    },
+    {
+        "serialNumber": 16,
+        "image": "Image 16",
+        "cameraName": "Camera Name 16",
+        "process": "Process 16",
+        "dateTime": "YYYY-MM-DD/00:00:00-16"
+    },
+    {
+        "serialNumber": 17,
+        "image": "Image 17",
+        "cameraName": "Camera Name 17",
+        "process": "Process 17",
+        "dateTime": "YYYY-MM-DD/00:00:00-17"
+    },
+    {
+        "serialNumber": 18,
+        "image": "Image 18",
+        "cameraName": "Camera Name 18",
+        "process": "Process 18",
+        "dateTime": "YYYY-MM-DD/00:00:00-18"
+    },
+    {
+        "serialNumber": 19,
+        "image": "Image 19",
+        "cameraName": "Camera Name 19",
+        "process": "Process 19",
+        "dateTime": "YYYY-MM-DD/00:00:00-19"
+    },
+    {
+        "serialNumber": 20,
+        "image": "Image 20",
+        "cameraName": "Camera Name 20",
+        "process": "Process 20",
+        "dateTime": "YYYY-MM-DD/00:00:00-20"
     }
   ]
   
