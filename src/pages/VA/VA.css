@@ -119,6 +119,7 @@ body {
       transform: translateY(-50%);
       width: 30px;
       height: 30px;
+      margin-left: 150px;
       border-radius: 50%;
       background-color: #F7F8FA;
       display: flex;
@@ -131,7 +132,7 @@ body {
         These icons are positioned absolutely and have specific width, height, border-radius, background color, and alignment properties. */
     
     .notification-icon12 {
-      right: 220px;
+      right: 100px;
     }
     
     
