@@ -174,62 +174,71 @@ body {
     /*  This section targets a <select> element within an element with the class "dropdown12".
         It styles the dropdown select box, including padding, border-color, font-family, font-size, and color. */
     
-    .date-chooser12 {
-      position: relative;
-      margin-left: 5px;
-    }
-    
-    /*  This section targets an element with the class "date-chooser12".
-        It styles a date chooser component by setting properties like position, margin-left, and relative positioning. */
-    
-    .date-chooser12 .calendar-icon12 {
-      position: absolute;
-      top: 50%;
-      left: 5px;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: #486BAB;
-    }
-    
-    
-    
-    .date-chooser12 .calendar-icon12 img {
-      width: 18px;
-      height: 18px;
-    }
-    
-    .date-chooser12 .calendar-icon12 span {
-      font-family: Fira Sans;
-      font-size: 15px;
-      color: rgba(58, 75, 104, 0.6);
-      padding: 10px;
-    }
-    
-    .date-chooser12 input {
-      padding: 8px 8px 8px 30px;
-      font-family: Fira Sans;
-      text-align: justify;
-      text-align-last: center;
-      font-size: 16px;
-      color: #486BAB;
-      border-color: rgba(58, 75, 104, 0.2);
-      width: 300px;
-    }
+        .start-date {
+          position: relative;
+          margin-left: 5px;
+          display: inline-block;
+        }
+        
+        .start-date > div {
+          display: inline-flex;
+          align-items: center;
+        }
+        
+        .start-date .react-datepicker-wrapper {
+          width: auto;
+        }
+        
+        .start-date .react-datepicker__input-container {
+          display: inline-flex;
+          align-items: center;
+          position: relative;
+        }
+        
+        .start-date .react-datepicker__input-container input {
+          padding: 8px 8px 8px 30px;
+          font-family: Fira Sans;
+          text-align: justify;
+          text-align-last: center;
+          font-size: 16px;
+          color: #486BAB;
+          border-color: rgba(58, 75, 104, 0.2);
+          width: auto;
+          min-width: 50px;
+        }
+        
+        .start-date .react-datepicker__input-container input::placeholder {
+          color: rgba(58, 75, 104, 0.6);
+        }
+        
+        .start-date .react-datepicker__navigation {
+            width: 20px;
+            height: 20px;
+        }
 
-    .date-chooser12 .react-datepicker__navigation {
-      width: 30px;
-      height: 30px;
-    }
-    
-    .date-chooser12 .react-datepicker__navigation--previous {
-      border-right-color: #486BAB;
-    }
-    
-    .date-chooser12 .react-datepicker__navigation--next {
-      border-left-color: #486BAB;
-    }       
+        .start-date .react-datepicker__navigation--previous {
+          left: 5px;
+          top: 12px;
+          transform: translateY(-50%);
+        }
+        
+        .start-date .react-datepicker__navigation--next {
+          position: absolute;
+          top: 12px;
+          right: 0;
+          transform: translateY(-50%);
+        }                                                    
+        
+        .start-date .react-datepicker__time-container {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          margin-left: 0px; /* Adjust the spacing between the calendar and the time column */
+        }
+
+        .start-date .react-datepicker__triangle {
+          visibility: collapse;
+        }              
     
     .row112 button {
       font-family: Fira Sans;
@@ -241,6 +250,7 @@ body {
       font-weight: Medium;
       font-size: 16px;
       text-align: center;
+      margin-right: 20px;
       border-radius: 4px;
       border-color: #486BAB;
       overflow: hidden;

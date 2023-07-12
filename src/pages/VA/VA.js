@@ -74,11 +74,7 @@ const AddStream = () => {
               <option value="option2">Option 2</option>
             </select>
           </div>
-          <div className="date-chooser12">
-            <div className="calendar-icon12">
-              <img src="/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/assets/icon/Calender.png" alt="Calendar Icon" />
-              <span>Duration:</span>
-            </div>
+          <div className="start-date">
             <DatePicker
               id="duration-picker"
               selected={selectedDateTime} // Use the state variable to set the selected date and time stamp
