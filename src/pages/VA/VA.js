@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/imgs/logo.png";
+import logo from "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/assets/imgs/logo.png";
 import "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/pages/VA/VA.css";
 import dummyData from './dummyData.json';
 import DatePicker from 'react-datepicker';
@@ -12,6 +12,7 @@ const AddStream = () => {
   const [authenticated, setAuthenticated] = useState(false);
   const [newVideoSource, setNewVideoSource] = useState("");
   const [data, setData] = useState([]);
+  const [selectedDateTime, setSelectedDateTime] = useState(null);
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -80,15 +81,15 @@ const AddStream = () => {
             </div>
             <DatePicker
               id="duration-picker"
-              selected={new Date()} // Set the initial selected date (you can modify this as needed)
+              selected={selectedDateTime} // Use the state variable to set the selected date and time stamp
               showTimeSelect // Enable time selection
               timeFormat="hh:mm aa" // Set the time format (12-hour format)
               timeIntervals={15} // Set the time intervals (e.g., 15 minutes)
               dateFormat="MM-dd-yyyy hh:mm aa" // Set the desired date and time format
               placeholderText="Select duration" // Placeholder text for the input field
               popperPlacement="bottom-end" // Position the date picker below the input field
-              onChange={(date) => setNewVideoSource(date)} // Store the selected value in the state variable
-              value={newVideoSource} // Set the selected value from the state variable
+              onChange={(date) => setSelectedDateTime(date)} // Update the state variable with the selected value
+              value={selectedDateTime ? selectedDateTime : ''} // Display the selected value from the state variable
             />
           </div>
           <button className="download-btn12">

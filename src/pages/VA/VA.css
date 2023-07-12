@@ -175,7 +175,7 @@ body {
     
     .date-chooser12 {
       position: relative;
-      margin-left: 200px;
+      margin-left: 5px;
     }
     
     /*  This section targets an element with the class "date-chooser12".
@@ -184,7 +184,7 @@ body {
     .date-chooser12 .calendar-icon12 {
       position: absolute;
       top: 50%;
-      left: 10px;
+      left: 5px;
       transform: translateY(-50%);
       display: flex;
       align-items: center;
@@ -207,7 +207,7 @@ body {
     }
     
     .date-chooser12 input {
-      padding: 8px 8px 8px 60px;
+      padding: 8px 8px 8px 30px;
       font-family: Fira Sans;
       text-align: justify;
       text-align-last: center;
@@ -216,6 +216,19 @@ body {
       border-color: rgba(58, 75, 104, 0.2);
       width: 300px;
     }
+
+    .date-chooser12 .react-datepicker__navigation {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .date-chooser12 .react-datepicker__navigation--previous {
+      border-right-color: #486BAB;
+    }
+    
+    .date-chooser12 .react-datepicker__navigation--next {
+      border-left-color: #486BAB;
+    }       
     
     .row112 button {
       font-family: Fira Sans;
