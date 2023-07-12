@@ -75,7 +75,7 @@ const AddStream = () => {
           </div>
           <div className="date-chooser12">
             <div className="calendar-icon12">
-              <img src="/Users/mac/Desktop/VMS/react/frontend-backend/ABS_VMS/src/assets/icon/Calender.png" alt="Calendar Icon" />
+              <img src="/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/assets/icon/Calender.png" alt="Calendar Icon" />
               <span>Duration:</span>
             </div>
             <DatePicker
