@@ -161,7 +161,15 @@ body {
     
     /*  This section targets elements with the class "selection-row".
         It styles rows by setting properties like display, align-items, padding, position, top, left, width, and z-index. */
-        
+    .selection-row .department select {
+      padding: 8px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      color: #486BAB;
+      border-color: rgba(58, 75, 104, 0.2);
+      width: 200px;
+    }
+          
     .start-date {
       display: flex;
       align-items: center;

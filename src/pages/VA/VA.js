@@ -5,6 +5,8 @@ import "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/pages/VA/VA.css";
 import dummyData from './dummyData.json';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import departmentsData from './departments.json'; // Importing the department data
+
 
 
 const VA = () => {
@@ -14,7 +16,8 @@ const VA = () => {
   const [data, setData] = useState([]);
   const [selectedDateTime, setSelectedDateTime] = useState(null);
   const [selectedEndDateTime, setSelectedEndDateTime] = useState(null);
-
+  const [departments, setDepartments] = useState([]); // State variable for department data
+  const [selectedDepartment, setSelectedDepartment] = useState(""); // State variable for selected department
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -27,6 +30,10 @@ const VA = () => {
 
   useEffect(() => {
     setData(dummyData);
+
+    // Fetch department data from the JSON file
+    setDepartments(departmentsData);
+
   }, []);
 
   const handleNavigation = (path) => {
@@ -53,15 +60,22 @@ const VA = () => {
       <div className="container12">
         <div className="header12">
           <div className="left12">CAMERA RESULT / DEPARTMENT / CAMERA NAME</div>
-          <div className="notification-icon12">
-            <img src="./assets/Bell.png" alt="Notification Icon" />
-          </div>
-          <div className="profile12">
-            <img src="" alt="Profile" />
-          </div>
           <div className="menu12">NAME SURNAME</div>
         </div>
         <div className="selection-row">
+          <div className="department">
+            <select
+              value={selectedDepartment}
+              onChange={(e) => setSelectedDepartment(e.target.value)}
+            >
+              <option value="">Select Department</option>
+              {departments.map((department, index) => (
+                <option key={index} value={department}>
+                  {department}
+                </option>
+              ))}
+            </select>
+          </div>
           <div className="start-date">
             <DatePicker
               id="duration-picker"
