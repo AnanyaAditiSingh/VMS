@@ -6,7 +6,8 @@ import dummyData from './dummyData.json';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import departmentsData from './departments.json'; // Importing the department data
-
+import violationsData from './violations.json'; // Importing the violation data
+import SearchButton from "./SearchButton";
 
 
 const VA = () => {
@@ -18,6 +19,9 @@ const VA = () => {
   const [selectedEndDateTime, setSelectedEndDateTime] = useState(null);
   const [departments, setDepartments] = useState([]); // State variable for department data
   const [selectedDepartment, setSelectedDepartment] = useState(""); // State variable for selected department
+  const [selectedViolation, setSelectedViolation] = useState("");
+  const [isSearchInteractive, setIsSearchInteractive] = useState(false);
+
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -35,6 +39,31 @@ const VA = () => {
     setDepartments(departmentsData);
 
   }, []);
+
+  useEffect(() => {
+  
+    // Enable search button if all four selections are made
+    if (
+      selectedDepartment &&
+      selectedViolation &&
+      selectedDateTime &&
+      selectedEndDateTime
+    ) {
+      setIsSearchInteractive(true);
+    } else {
+      setIsSearchInteractive(false);
+    }
+  }, [selectedDepartment, selectedViolation, selectedDateTime, selectedEndDateTime]);
+  
+
+  const [showDatabaseTable, setShowDatabaseTable] = useState(false);
+
+  const handleSearchButtonClick = () => {
+    // Make API call and fetch data here
+  
+    // Show the database table
+    setShowDatabaseTable(true);
+  };    
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -76,6 +105,19 @@ const VA = () => {
               ))}
             </select>
           </div>
+          <div className="violation">
+            <select
+              value={selectedViolation}
+              onChange={(e) => setSelectedViolation(e.target.value)}
+            >
+              <option value="">Select Violation</option>
+              {violationsData.map((violation, index) => (
+                <option key={index} value={violation}>
+                  {violation}
+                </option>
+              ))}
+            </select>
+          </div>
           <div className="start-date">
             <DatePicker
               id="duration-picker"
@@ -104,11 +146,17 @@ const VA = () => {
               value={selectedEndDateTime ? selectedEndDateTime : ''} // Display the selected value from the state variable
             />
           </div>
+          {/* Search button */}
+          <SearchButton
+            isInteractive={isSearchInteractive}
+            onClick={handleSearchButtonClick}
+          />
         </div>
       </div>
       <div className="divider">
           &nbsp;
       </div>  
+      {showDatabaseTable && (
       <div className="database-table">
         <table>
           <thead>
@@ -132,7 +180,8 @@ const VA = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      </div> 
+      )}
       <div className="footer">
         <div className="copyright">
           &copy; 2023 Arcturus Business Solutions

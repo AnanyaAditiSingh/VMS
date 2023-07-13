@@ -112,40 +112,6 @@ body {
     /*  This section targets elements with the class "menu" inside the "header12" element.
         It styles the menu content within the header, including setting the font weight and aligning it to the right using margin-right: auto. */
     
-    .notification-icon12,
-    .profile12 {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 30px;
-      height: 30px;
-      margin-left: 150px;
-      border-radius: 50%;
-      background-color: #F7F8FA;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    /*  This section targets elements with the classes "notification-icon12" and "profile12".
-        It styles notification icons and profile icons.
-        These icons are positioned absolutely and have specific width, height, border-radius, background color, and alignment properties. */
-    
-    .notification-icon12 {
-      right: 100px;
-    }
-    
-    
-    .profile12 {
-      right: 20px;
-      width: 50px;
-      height: 50px;
-    }
-    
-    .notification-icon12 img,
-    .profile12 img {
-      object-fit: center;
-    }
     
     .selection-row {
       display: flex;
@@ -169,16 +135,26 @@ body {
       border-color: rgba(58, 75, 104, 0.2);
       width: 200px;
     }
+
+    .selection-row .violation select {
+      padding: 8px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      color: #486BAB;
+      border-color: rgba(58, 75, 104, 0.2);
+      width: 200px;
+    }
+    
           
     .start-date {
       display: flex;
       align-items: center;
-      margin-right: 5px;
+      margin-right: 20px;
       max-width: 150px;
     }
         
     .start-date .react-datepicker__input-container input {
-      padding: 8px 8px 8px 8px; /* Adjust padding for input field */
+      padding: 8px 30px 8px 8px; /* Adjust padding for input field */
       font-family: Fira Sans;
       text-align: center;
       text-align-last: center;
@@ -232,6 +208,7 @@ body {
       display: flex;
       align-items: center;
       max-width: 150px;
+      margin-left: 10px;
     }
         
     .end-date .react-datepicker__input-container input {
@@ -253,7 +230,21 @@ body {
 
     .end-date .react-datepicker__navigation--next:not(.other-class) {
       right: 0;
-    }        
+    }
+
+    .search-button {
+      padding: 8px 16px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      background-color: #486bab;
+      color: #fff;
+      border: none;
+      cursor: not-allowed;
+    }
+    
+    .search-button.interactive {
+      cursor: pointer;
+    }
     
     .divider {
       border-top: 2px solid #486BAB;
