@@ -88,15 +88,11 @@ const AddStream = () => {
               value={selectedDateTime ? selectedDateTime : ''} // Display the selected value from the state variable
             />
           </div>
-          <button className="download-btn12">
-            <img src="/Users/mac/Desktop/VMS/react/frontend-backend/ABS_VMS/src/assets/icon/download.png" alt="Download Icon" />
-          </button>
-          <button className="search-btn12">Search</button>
         </div>
       </div>
       <div className="divider">
           &nbsp;
-      </div>
+      </div>  
       <div className="database-table">
         <table>
           <thead>

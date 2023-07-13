@@ -174,115 +174,47 @@ body {
     /*  This section targets a <select> element within an element with the class "dropdown12".
         It styles the dropdown select box, including padding, border-color, font-family, font-size, and color. */
     
-        .start-date {
-          position: relative;
-          margin-left: 5px;
-          display: inline-block;
-        }
-        
-        .start-date > div {
-          display: inline-flex;
-          align-items: center;
-        }
-        
-        .start-date .react-datepicker-wrapper {
-          width: auto;
-        }
-        
-        .start-date .react-datepicker__input-container {
-          display: inline-flex;
-          align-items: center;
-          position: relative;
-        }
-        
         .start-date .react-datepicker__input-container input {
-          padding: 8px 8px 8px 30px;
+          padding: 8px 30px 8px 8px; /* Adjust padding for input field */
           font-family: Fira Sans;
           text-align: justify;
           text-align-last: center;
           font-size: 16px;
           color: #486BAB;
           border-color: rgba(58, 75, 104, 0.2);
-          width: auto;
-          min-width: 50px;
-        }
-        
-        .start-date .react-datepicker__input-container input::placeholder {
-          color: rgba(58, 75, 104, 0.6);
-        }
-        
-        .start-date .react-datepicker__navigation {
-            width: 20px;
-            height: 20px;
-        }
-
-        .start-date .react-datepicker__navigation--previous {
-          left: 5px;
-          top: 12px;
-          transform: translateY(-50%);
-        }
-        
-        .start-date .react-datepicker__navigation--next {
-          position: absolute;
-          top: 12px;
-          right: 0;
-          transform: translateY(-50%);
-        }                                                    
+          width: 100%;
+          }
         
         .start-date .react-datepicker__time-container {
           position: absolute;
           top: 0;
-          left: 100%;
-          margin-left: 0px; /* Adjust the spacing between the calendar and the time column */
+          left: 100%; /* Position the time container to the right of the calendar */
+          margin-left: 0px; /* Adjust the margin to create space between the calendar and time container */
         }
-
-        .start-date .react-datepicker__triangle {
-          visibility: collapse;
-        }              
-    
-    .row112 button {
-      font-family: Fira Sans;
-      background-color: #486BAB;
-      color: #FFFFFF;
-      width: 120px;
-      height: 40px;
-      opacity: 1;
-      font-weight: Medium;
-      font-size: 16px;
-      text-align: center;
-      margin-right: 20px;
-      border-radius: 4px;
-      border-color: #486BAB;
-      overflow: hidden;
-    }
-    
-    /*  This section targets button elements within the "row112" class.
-        It styles buttons with properties like font-family, background-color, color, width, height, opacity, 
-        font-weight, font-size, text-align, border-radius, and border-color.*/
-    
-    .row112 button:hover {
-      background-color: #3C5B82;
-    }
-    
-    /*  This section targets button elements within the "row112" class when they are being hovered over.
-        It sets the background color to create a hover effect for the buttons. */
-    
-    .row112 .download-btn {
-      background-color: #FFFFFF;
-      border-color: #FFFFFF;
-      width: 40px;
-      height: 40px;
-    }
-    
-    /*  This section targets elements with the class "download-btn" within the "row112" class.
-        It styles download buttons by setting properties like background-color, border-color, width, and height. */
-    
-    .row112 .download-btn:hover {
-      background-color: #F7F8FA;
-    }
-    
-    /*  This section targets elements with the class "download-btn" within the "row112" class when they are being hovered over.
-        It sets the background color to create a hover effect for the download buttons. */
+        
+        .start-date .react-datepicker__time-container .react-datepicker__time {
+          width: 100%;
+        }
+        
+        .start-date .react-datepicker__time-container .react-datepicker__time-box {
+          width: 100%;
+        }
+        
+        .start-date .react-datepicker__time-container .react-datepicker__time-list {
+          padding-left: 0;
+          list-style: none;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        
+        .start-date .react-datepicker__time-container .react-datepicker__time-list .react-datepicker__time-list-item {
+          padding: 5px;
+          cursor: pointer;
+        }
+        
+        .start-date .react-datepicker__time-container .react-datepicker__time-list .react-datepicker__time-list-item:hover {
+          background-color: #f0f0f0;
+        }        
     
     .divider {
       border-top: 2px solid #486BAB;
