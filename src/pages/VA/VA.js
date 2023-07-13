@@ -7,12 +7,14 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 
-const AddStream = () => {
+const VA = () => {
   const navigate = useNavigate();
   const [authenticated, setAuthenticated] = useState(false);
   const [newVideoSource, setNewVideoSource] = useState("");
   const [data, setData] = useState([]);
   const [selectedDateTime, setSelectedDateTime] = useState(null);
+  const [selectedEndDateTime, setSelectedEndDateTime] = useState(null);
+
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -59,21 +61,7 @@ const AddStream = () => {
           </div>
           <div className="menu12">NAME SURNAME</div>
         </div>
-        <div className="row112">
-          <div className="dropdown12">
-            <select>
-              <option value="department" selected>Department</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-            </select>
-          </div>
-          <div className="dropdown12">
-            <select>
-              <option value="department" selected>Selection of Violation:</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-            </select>
-          </div>
+        <div className="selection-row">
           <div className="start-date">
             <DatePicker
               id="duration-picker"
@@ -82,10 +70,24 @@ const AddStream = () => {
               timeFormat="hh:mm aa" // Set the time format (12-hour format)
               timeIntervals={15} // Set the time intervals (e.g., 15 minutes)
               dateFormat="MM-dd-yyyy hh:mm aa" // Set the desired date and time format
-              placeholderText="Select duration" // Placeholder text for the input field
+              placeholderText="Start Date & Time" // Placeholder text for the input field
               popperPlacement="bottom-end" // Position the date picker below the input field
               onChange={(date) => setSelectedDateTime(date)} // Update the state variable with the selected value
               value={selectedDateTime ? selectedDateTime : ''} // Display the selected value from the state variable
+            />
+          </div>
+          <div className="end-date">
+            <DatePicker
+              id="end-date-picker"
+              selected={selectedEndDateTime} // Use the state variable to set the selected end date and time stamp
+              showTimeSelect // Enable time selection
+              timeFormat="hh:mm aa" // Set the time format (12-hour format)
+              timeIntervals={15} // Set the time intervals (e.g., 15 minutes)
+              dateFormat="MM-dd-yyyy hh:mm aa" // Set the desired date and time format
+              placeholderText="End Date & Time" // Placeholder text for the input field
+              popperPlacement="bottom-start" // Position the date picker below the input field
+              onChange={(date) => setSelectedEndDateTime(date)} // Update the state variable with the selected value
+              value={selectedEndDateTime ? selectedEndDateTime : ''} // Display the selected value from the state variable
             />
           </div>
         </div>
@@ -126,4 +128,4 @@ const AddStream = () => {
   );
 };
 
-export default AddStream;
+export default VA;
