@@ -232,6 +232,20 @@ body {
       right: 0;
     }
 
+    .va-download-button {
+      padding: 8px 16px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      background-color: #486bab;
+      color: #fff;
+      border: none;
+      cursor: not-allowed;
+    }
+    
+    .va-download-button.interactive {
+      cursor: pointer;
+    }        
+
     .search-button {
       padding: 8px 16px;
       font-family: Fira Sans;

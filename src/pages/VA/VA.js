@@ -8,6 +8,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import departmentsData from './departments.json'; // Importing the department data
 import violationsData from './violations.json'; // Importing the violation data
 import SearchButton from "./SearchButton";
+import DownloadButton from "./DownloadButton";
 
 
 const VA = () => {
@@ -21,6 +22,7 @@ const VA = () => {
   const [selectedDepartment, setSelectedDepartment] = useState(""); // State variable for selected department
   const [selectedViolation, setSelectedViolation] = useState("");
   const [isSearchInteractive, setIsSearchInteractive] = useState(false);
+  const [isDownloadInteractive, setIsDownloadInteractive] = useState(false);
 
 
   useEffect(() => {
@@ -41,6 +43,21 @@ const VA = () => {
   }, []);
 
   useEffect(() => {
+    if (
+      selectedDepartment &&
+      selectedViolation &&
+      selectedDateTime &&
+      selectedEndDateTime
+    ) {
+      setIsSearchInteractive(true);
+      setIsDownloadInteractive(true);
+    } else {
+      setIsSearchInteractive(false);
+      setIsDownloadInteractive(false);
+    }
+  }, [selectedDepartment, selectedViolation, selectedDateTime, selectedEndDateTime]);  
+
+  useEffect(() => {
   
     // Enable search button if all four selections are made
     if (
@@ -57,6 +74,31 @@ const VA = () => {
   
 
   const [showDatabaseTable, setShowDatabaseTable] = useState(false);
+
+  const handleDownloadButtonClick = () => {
+    // Perform API call and fetch the data for download here
+  
+    // Example code to download data as a file
+    const dataToDownload = dummyData.filter((data) => {
+      // Add your own filtering logic based on user selections
+      return (
+        data.department === selectedDepartment &&
+        data.violation === selectedViolation &&
+        data.dateTime >= selectedDateTime &&
+        data.dateTime <= selectedEndDateTime
+      );
+    });
+  
+    const jsonData = JSON.stringify(dataToDownload);
+    const blob = new Blob([jsonData], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "data.json");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };  
 
   const handleSearchButtonClick = () => {
     // Make API call and fetch data here
@@ -146,6 +188,11 @@ const VA = () => {
               value={selectedEndDateTime ? selectedEndDateTime : ''} // Display the selected value from the state variable
             />
           </div>
+          {/* Download button */}
+          <DownloadButton
+            isInteractive={isDownloadInteractive}
+            onClick={handleDownloadButtonClick}
+          />
           {/* Search button */}
           <SearchButton
             isInteractive={isSearchInteractive}
