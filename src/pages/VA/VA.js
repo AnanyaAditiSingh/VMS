@@ -157,7 +157,7 @@ const VA = () => {
           &nbsp;
       </div>  
       {showDatabaseTable && (
-      <div className="database-table">
+      <div className="va-database-table">
         <table>
           <thead>
             <tr>

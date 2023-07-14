@@ -253,13 +253,13 @@ body {
       margin-left: 245px;
     }
 
-    .database-table {
+    .va-database-table {
       margin: 0 10px;
       overflow-y: auto;
       max-height: 640px; /* Adjust the value based on your requirements */
     }
     
-    .database-table table {
+    .va-database-table table {
       width: 90%;
       margin-left: 245px;
       margin-right: 100px;
@@ -267,7 +267,7 @@ body {
       border: 2px solid #061737;
     }
     
-    .database-table th {
+    .va-database-table th {
       background-color: #486BAB;
       color: #fff;
       font-weight: bold;
@@ -275,21 +275,21 @@ body {
       text-align: center;
     }
     
-    .database-table td {
+    .va-database-table td {
       background-color: #abb4be;
       padding: 10px;
       border-bottom: 1px solid #486BAB;
       text-align: center;
     }
     
-    .database-table th:last-child {
+    .va-database-table th:last-child {
       border-right: 2px solid #061737;
     }
     
-    .database-table td:last-child {
+    .va-database-table td:last-child {
       border-right: 2px solid #061737;
     }
     
-    .database-table-container {
+    .va-database-table-container {
       overflow: hidden;
     }    

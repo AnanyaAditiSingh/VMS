@@ -108,6 +108,7 @@ const Playback = () => {
   const handleReset = () => {
     setSelectedRows([]);
     setSelectedPlaybackRow(null);
+    setSelectedVideo(null); // Reset selected video
     setSelectedDownloads([]); // Reset selected downloads
   };
 
