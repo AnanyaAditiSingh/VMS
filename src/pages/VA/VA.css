@@ -209,6 +209,7 @@ body {
       align-items: center;
       max-width: 150px;
       margin-left: 10px;
+      margin-right: auto;
     }
         
     .end-date .react-datepicker__input-container input {
@@ -236,7 +237,7 @@ body {
       padding: 8px 16px;
       font-family: Fira Sans;
       font-size: 16px;
-      background-color: #486bab;
+      background-color: #0009ad;
       color: #fff;
       border: none;
       cursor: not-allowed;
@@ -244,13 +245,33 @@ body {
     
     .va-download-button.interactive {
       cursor: pointer;
-    }        
+    }
+    
+    .va-reset-button {
+      right: auto;
+      margin-right: 10px;
+      background-color: rgb(149, 0, 255);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-family: Fira Sans; 
+      font-size: 16px;
+    }
+    
+    .va-reset-button:hover {
+      background-color: rgb(149, 0, 255);
+    }
+    
+    .va-reset-button:active {
+      background-color: rgb(149, 0, 255);
+    }
 
     .search-button {
       padding: 8px 16px;
       font-family: Fira Sans;
       font-size: 16px;
-      background-color: #486bab;
+      background-color: #02c118;
       color: #fff;
       border: none;
       cursor: not-allowed;
@@ -303,7 +324,43 @@ body {
     .va-database-table td:last-child {
       border-right: 2px solid #061737;
     }
-    
-    .va-database-table-container {
-      overflow: hidden;
-    }    
+
+.va-open-button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.va-open-button[disabled] {
+  background-color: #aaa;
+  cursor: default;
+}
+
+.popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  z-index: 9999;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-form input,
+.popup-form button {
+  margin-top: 10px;
+}
+
+.popup-form button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
