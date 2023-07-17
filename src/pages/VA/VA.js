@@ -256,9 +256,10 @@ const VA = () => {
               <th>S. No.</th>
               <th>IMAGE</th>
               <th>CAMERA NAME</th>
+              <th>DATE & TIME</th>
+              <th>VIOLATIONS</th>
               <th>PROCESS</th>
               <th>OPEN/CLOSE</th>
-              <th>DATE & TIME</th>
             </tr>
           </thead>
           <tbody>
@@ -267,6 +268,14 @@ const VA = () => {
                 <td>{item.serialNumber}</td>
                 <td>{item.image}</td>
                 <td>{item.cameraName}</td>
+                <td>{item.dateTime}</td>
+                <td>
+                  <ul className="violations-list">
+                    <li>Helmet: {item.serialNumber % 2 === 0 ? 1 : 0}</li>
+                    <li>Vest: {item.serialNumber % 3 === 0 ? 1 : 0}</li>
+                    <li>Harness: {item.serialNumber % 4 === 0 ? 1 : 0}</li>
+                  </ul>
+                </td>
                 <td>{item.process}</td>
                 <td>
                   <button
@@ -276,7 +285,6 @@ const VA = () => {
                     {buttonStatus[item.serialNumber] ? "OPEN" : "CLOSE"}
                   </button>
                 </td>
-                <td>{item.dateTime}</td>
               </tr>
             ))}
           </tbody>
@@ -319,9 +327,9 @@ const VA = () => {
       <Modal show={showFormModal} onHide={handleCloseForm} centered>
         <div className="form-modal-container">
           <Modal.Header closeButton>
-          <div class="form-wrapper">
-            <Modal.Title>Violation Form</Modal.Title>
-          </div>
+            <div className="form-wrapper">
+              <Modal.Title>Violation Form</Modal.Title>
+            </div>
           </Modal.Header>
           <Modal.Body>
             <Form className="form-modal">
@@ -337,7 +345,7 @@ const VA = () => {
                 />
               </Form.Group>
               <Form.Group className="form-group">
-                <Form.Label className="form-label">Violation</Form.Label>
+                <Form.Label className="form-label">Actions: </Form.Label>
                 {violationsData.map((violation, index) => (
                   <Form.Check
                     className="form-check-label"
