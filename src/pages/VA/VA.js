@@ -120,6 +120,16 @@ const VA = () => {
 
   const handleFormSubmit = () => {
     toggleButton(selectedButtonId);
+    const newData = data.map((item) => {
+      if (item.serialNumber === selectedButtonId) {
+        return {
+          ...item,
+          process: formName + " - " + formViolation,
+        };
+      }
+      return item;
+    });
+    setData(newData);
     handleCloseForm();
   };
 
@@ -224,21 +234,21 @@ const VA = () => {
             </tr>
           </thead>
           <tbody>
-            {dummyData.map((data) => (
-              <tr key={data.serialNumber}>
-                <td>{data.serialNumber}</td>
-                <td>{data.image}</td>
-                <td>{data.cameraName}</td>
-                <td>{data.process}</td>
+            {data.map((item) => (
+              <tr key={item.serialNumber}>
+                <td>{item.serialNumber}</td>
+                <td>{item.image}</td>
+                <td>{item.cameraName}</td>
+                <td>{item.process}</td>
                 <td>
                   <button
-                    disabled={!buttonStatus[data.serialNumber]}
-                    onClick={() => handleOpenForm(data.serialNumber)}
+                    disabled={!buttonStatus[item.serialNumber]}
+                    onClick={() => handleOpenForm(item.serialNumber)}
                   >
-                    {buttonStatus[data.serialNumber] ? "OPEN" : "CLOSE"}
+                    {buttonStatus[item.serialNumber] ? "OPEN" : "CLOSE"}
                   </button>
                 </td>
-                <td>{data.dateTime}</td>
+                <td>{item.dateTime}</td>
               </tr>
             ))}
           </tbody>
