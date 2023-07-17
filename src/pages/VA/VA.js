@@ -29,6 +29,8 @@ const VA = () => {
   const [selectedButtonId, setSelectedButtonId] = useState(null);
   const [formName, setFormName] = useState("");
   const [formViolation, setFormViolation] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(30);
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -133,6 +135,32 @@ const VA = () => {
     handleCloseForm();
   };
 
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const handleFirstPage = () => {
+    setCurrentPage(1);
+  };
+
+  const handleLastPage = () => {
+    setCurrentPage(totalPages);
+  };
+
+  const renderPaginationText = () => {
+    return `${currentPage}/${totalPages}`;
+  };
+
+  const getPageData = () => {
+    const startIndex = (currentPage - 1) * 20;
+    const endIndex = startIndex + 20;
+    return data.slice(startIndex, endIndex);
+  };
+
   return (
     <div>
       <div className="sidebar">
@@ -234,7 +262,7 @@ const VA = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item) => (
+            {getPageData().map((item) => (
               <tr key={item.serialNumber}>
                 <td>{item.serialNumber}</td>
                 <td>{item.image}</td>
@@ -253,6 +281,33 @@ const VA = () => {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="va-database-table-footer" style={{ maxHeight: "40px" }}>
+        <button
+          disabled={currentPage === 1}
+          onClick={handleFirstPage}
+        >
+          {"| <"}
+        </button>
+        <button
+          disabled={currentPage === 1}
+          onClick={handlePreviousPage}
+        >
+          {"<<"}
+        </button>
+        <div className="pagination-text">{renderPaginationText()}</div>
+        <button
+          disabled={currentPage === totalPages}
+          onClick={handleNextPage}
+        >
+          {">>"}
+        </button>
+        <button
+          disabled={currentPage === totalPages}
+          onClick={handleLastPage}
+        >
+          {"> |"}
+        </button>
       </div>
       <div className="footer">
         <div className="copyright">

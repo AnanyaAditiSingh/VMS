@@ -291,7 +291,7 @@ body {
     .va-database-table {
       margin: 0 10px;
       overflow-y: auto;
-      max-height: 640px; /* Adjust the value based on your requirements */
+      max-height: 600px; /* Adjust the value based on your requirements */
     }
     
     .va-database-table table {
@@ -360,7 +360,7 @@ body {
 }
 
 .form-control {
-  background-color: #0000ff;
+  background-color: rgb(161, 150, 150);
   color: #fff;
 }
 
@@ -419,3 +419,29 @@ body {
   z-index: 999;
 }
 
+.va-database-table-footer {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 20px;
+  margin-top: 10px;
+}
+
+.va-database-table-footer button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.va-database-table-footer button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.va-database-table-footer .pagination-text {
+  margin: 0 10px;
+  font-weight: bold;
+}
