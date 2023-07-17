@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Modal, Form, Button } from "react-bootstrap";
 import logo from "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/assets/imgs/logo.png";
 import "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/pages/VA/VA.css";
 import dummyData from './dummyData.json';
@@ -23,6 +24,11 @@ const VA = () => {
   const [isSearchInteractive, setIsSearchInteractive] = useState(false);
   const [isDownloadInteractive, setIsDownloadInteractive] = useState(false);
   const [showDatabaseTable, setShowDatabaseTable] = useState(false);
+  const [buttonStatus, setButtonStatus] = useState({});
+  const [showFormModal, setShowFormModal] = useState(false);
+  const [selectedButtonId, setSelectedButtonId] = useState(null);
+  const [formName, setFormName] = useState("");
+  const [formViolation, setFormViolation] = useState("");
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -45,6 +51,14 @@ const VA = () => {
     setIsSearchInteractive(isFormValid);
     setIsDownloadInteractive(isFormValid);
   }, [selectedDepartment, selectedViolation, selectedDateTime, selectedEndDateTime]);
+
+  useEffect(() => {
+    const initialButtonStatus = {};
+    dummyData.forEach((data) => {
+      initialButtonStatus[data.serialNumber] = true;
+    });
+    setButtonStatus(initialButtonStatus);
+  }, []);
 
   const handleDownloadButtonClick = () => {
     const dataToDownload = dummyData.filter((data) => {
@@ -86,6 +100,27 @@ const VA = () => {
     localStorage.setItem("authenticated", false);
     setAuthenticated(false);
     navigate("/login");
+  };
+
+  const toggleButton = (serialNumber) => {
+    setButtonStatus((prevState) => ({
+      ...prevState,
+      [serialNumber]: !prevState[serialNumber],
+    }));
+  };
+
+  const handleOpenForm = (serialNumber) => {
+    setSelectedButtonId(serialNumber);
+    setShowFormModal(true);
+  };
+
+  const handleCloseForm = () => {
+    setShowFormModal(false);
+  };
+
+  const handleFormSubmit = () => {
+    toggleButton(selectedButtonId);
+    handleCloseForm();
   };
 
   return (
@@ -170,42 +205,97 @@ const VA = () => {
             onClick={handleDownloadButtonClick}
           />
           {/* Reset button */}
-          <button className="va-reset-button"
-            onClick={handleResetButtonClick}>
+          <button className="va-reset-button" onClick={handleResetButtonClick}>
             Reset
           </button>
         </div>
       </div>
       <div className="divider">&nbsp;</div>
-        <div className="va-database-table">
-          <table>
-            <thead>
-              <tr>
-                <th>S. No.</th>
-                <th>IMAGE</th>
-                <th>CAMERA NAME</th>
-                <th>PROCESS</th>
-                <th>DATE & TIME</th>
+      <div className="va-database-table">
+        <table>
+          <thead>
+            <tr>
+              <th>S. No.</th>
+              <th>IMAGE</th>
+              <th>CAMERA NAME</th>
+              <th>PROCESS</th>
+              <th>OPEN/CLOSE</th>
+              <th>DATE & TIME</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dummyData.map((data) => (
+              <tr key={data.serialNumber}>
+                <td>{data.serialNumber}</td>
+                <td>{data.image}</td>
+                <td>{data.cameraName}</td>
+                <td>{data.process}</td>
+                <td>
+                  <button
+                    disabled={!buttonStatus[data.serialNumber]}
+                    onClick={() => handleOpenForm(data.serialNumber)}
+                  >
+                    {buttonStatus[data.serialNumber] ? "OPEN" : "CLOSE"}
+                  </button>
+                </td>
+                <td>{data.dateTime}</td>
               </tr>
-            </thead>
-            <tbody>
-              {dummyData.map((data) => (
-                <tr key={data.serialNumber}>
-                  <td>{data.serialNumber}</td>
-                  <td>{data.image}</td>
-                  <td>{data.cameraName}</td>
-                  <td>{data.process}</td>
-                  <td>{data.dateTime}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div className="footer">
         <div className="copyright">
           &copy; 2023 Arcturus Business Solutions
         </div>
       </div>
+
+      {/* Form Modal */}
+      <Modal show={showFormModal} onHide={handleCloseForm} centered>
+        <div className="form-modal-container">
+          <Modal.Header closeButton>
+          <div class="form-wrapper">
+            <Modal.Title>Violation Form</Modal.Title>
+          </div>
+          </Modal.Header>
+          <Modal.Body>
+            <Form className="form-modal">
+              <Form.Group className="form-group">
+                <Form.Label className="form-label">Name</Form.Label>
+                <Form.Control
+                  className="form-control"
+                  type="text"
+                  placeholder="Enter Name"
+                  maxLength={40}
+                  value={formName}
+                  onChange={(e) => setFormName(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="form-group">
+                <Form.Label className="form-label">Violation</Form.Label>
+                {violationsData.map((violation, index) => (
+                  <Form.Check
+                    className="form-check-label"
+                    key={index}
+                    type="radio"
+                    label={violation}
+                    checked={formViolation === violation}
+                    onChange={() => setFormViolation(violation)}
+                  />
+                ))}
+              </Form.Group>
+              <div className="form-buttons">
+                <Button variant="secondary" onClick={handleCloseForm}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleFormSubmit}>
+                  Submit
+                </Button>
+              </div>
+            </Form>
+          </Modal.Body>
+        </div>
+      </Modal>
     </div>
   );
 };

@@ -339,28 +339,83 @@ body {
   cursor: default;
 }
 
-.popup-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
+/* Styles for the pop-up form */
+.form-modal {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
-  z-index: 9999;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 
-.popup-form input,
-.popup-form button {
-  margin-top: 10px;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.popup-form button {
-  padding: 8px 16px;
-  font-size: 14px;
-  border: none;
-  background-color: #3498db;
-  color: white;
-  cursor: pointer;
+.form-label {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
+
+.form-control {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+.form-check-label {
+  color: #fff;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  background-color: #d3d3d3;
+  color: #000;
+  margin-right: 10px;
+}
+
+.form-buttons button:last-child {
+  margin-right: 0;
+}
+
+.form-modal-body {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  display: block;
+  text-align: center;
+  background-color: black;
+  color: #486BAB;
+  padding: 10px;
+}
+
+.form-modal-container {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
