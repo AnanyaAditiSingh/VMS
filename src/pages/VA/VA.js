@@ -280,9 +280,10 @@ const VA = () => {
                 <td>
                   <button
                     disabled={!buttonStatus[item.serialNumber]}
+                    className={`va-open-button ${buttonStatus[item.serialNumber] ? 'open' : 'close'}`}
                     onClick={() => handleOpenForm(item.serialNumber)}
                   >
-                    {buttonStatus[item.serialNumber] ? "OPEN" : "CLOSE"}
+                    {buttonStatus[item.serialNumber] ? 'OPEN' : 'CLOSE'}
                   </button>
                 </td>
               </tr>
