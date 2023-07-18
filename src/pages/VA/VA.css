@@ -14,14 +14,14 @@ body {
 /*  It contains CSS rules targeting the HTML element, but they are currently disabled.
     These rules set the height of the HTML element to 100% and the body element to 100% with some additional styling. */    
 
-.container12 {
+.va-container {
   overflow-y: hidden; /* Hide vertical overflow within the container */
 }
     
-/*  This section targets an element with the class "container12".
+/*  This section targets an element with the class "va-container".
 It sets the overflow-y property to "hidden", which hides the vertical overflow within the container. */
         
-.sidebar12 {
+.sidebar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -72,9 +72,9 @@ It sets the background color to create a hover effect for the navigation links. 
 /*  This section targets the last child element with the class "nav-link12" within its container.
 It sets a bottom margin to create spacing at the bottom of the navigation links. */
         
-.header12 {
+.va-header {
   display: flex;
-  flex-shrink: 0;
+  flex-direction: row;
   align-items: center;
   gap: 750px;
   padding: 12px 20px;
@@ -82,32 +82,35 @@ It sets a bottom margin to create spacing at the bottom of the navigation links.
   color: #486BAB;
   font-family: Fira Sans;
   position: absolute;
-  top: 3px;
+  top: 0px;
   width: calc(100% - 270px);
   left: 230px;
   height: 45px;
 }
-    
-/*  This section targets an element with the class "header12".
-It styles a header section by setting properties like display, flex-shrink, align-items, gap, padding, 
-background color, color, font-family, position, top, width, left, and height. */
-    
-.header12 .left {
-  color: rgba(58, 75, 104, 0.8);
-  font-size: 15px;
+
+/* CSS class for 'username-symbol' */
+.username-symbol {
+  /* Your styles here */
+  /* For example: */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
   font-family: Fira Sans;
+  color: #007bff;
 }
-    
-/*  This section targets elements with the class "left" inside the "header12" element.
-It styles the left-aligned content within the header. */
-    
-.header12 .menu {
+
+/* CSS class for 'page-name' */
+.page-name {
+  /* Your styles here */
+  /* For example: */
+  font-size: 24px;
   font-weight: 600;
-  margin-right: auto; /* Align the menu to the right */
+  color: #007bff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: 20px;
 }
-    
-/*  This section targets elements with the class "menu" inside the "header12" element.
-It styles the menu content within the header, including setting the font weight and aligning it to the right using margin-right: auto. */
     
 .selection-row {
   display: flex;

@@ -172,11 +172,15 @@ const VA = () => {
         <button onClick={() => handleNavigation("/stream-settings")}>ONVIF Settings</button>
         <button onClick={handleLogout}>Logout</button>
       </div>
-      <div className="container12">
-        <div className="header12">
-          <div className="left12">CAMERA RESULT / DEPARTMENT / CAMERA NAME</div>
-          <div className="menu12">NAME SURNAME</div>
+      <div className="va-container">
+      <div class="va-header">
+        <div class="page-name">
+          <h1>Video Analytics</h1>
         </div>
+        <div class="username-symbol">
+          NAME SURNAME
+        </div>
+      </div>
         <div className="selection-row">
           <div className="department">
             <select
