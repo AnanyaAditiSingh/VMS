@@ -409,7 +409,7 @@
         "serialNumber": 28,
         "image": "Image 28",
         "cameraName": "Camera Name 28",
-        "process": " ",
+        "action": " ",
         "dateTime": "YYYY-MM-DD/00:00:00-28",
         "violations": {
             "Helmet": 0,

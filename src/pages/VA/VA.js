@@ -136,7 +136,7 @@ const VA = () => {
       if (item.serialNumber === selectedButtonId) {
         return {
           ...item,
-          process: formName + " - " + formViolation,
+          action: formName + " - " + formViolation,
         };
       }
       return item;
