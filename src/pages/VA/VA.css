@@ -14,464 +14,461 @@ body {
 /*  It contains CSS rules targeting the HTML element, but they are currently disabled.
     These rules set the height of the HTML element to 100% and the body element to 100% with some additional styling. */    
 
-.va-container {
-  overflow-y: hidden; /* Hide vertical overflow within the container */
-}
-    
-/*  This section targets an element with the class "va-container".
-It sets the overflow-y property to "hidden", which hides the vertical overflow within the container. */
+    .va-container {
+      overflow-y: hidden; /* Hide vertical overflow within the container */
+    }
         
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 36px 0px 300px; /* Padding for the sidebar content */
-  gap: 10px;
-  position: fixed;
-  width: 230px;
-  height: 768px;
-  bottom: 0px;
-  left: 0;
-  top: 0px;
-  background: #486BAB;
-  color: #FFFFFF;
-  z-index: 1;
-}
-    
-/*  This section targets an element with the class "sidebar12".
-It styles a sidebar by setting various properties such as display, flex-direction, align-items, padding, width, height, background color, and color.
-The sidebar is given a fixed position on the left side of the page and has a width of 230 pixels. */
-    
-.logo12,
-  .nav-link12 {
-    color: #FFFFFF;
-    font-family: Fira Sans;
-    width: 100%;
-    padding: 15px;
-}
-    
-  /*  This section targets elements with the classes "logo12" and "nav-link12".
-It styles the logo and navigation links inside the sidebar.
-The styles include setting the color, font-family, width, and padding for these elements. */ 
-    
-.nav-link12 {
-  text-decoration: none;
-}
-    
-.nav-link12:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-    
-/*  This section targets the "nav-link12" class when the element is being hovered over.
-It sets the background color to create a hover effect for the navigation links. */
+    /*  This section targets an element with the class "va-container".
+    It sets the overflow-y property to "hidden", which hides the vertical overflow within the container. */
+            
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 36px 0px 300px; /* Padding for the sidebar content */
+      gap: 10px;
+      position: fixed;
+      width: 230px;
+      height: 768px;
+      bottom: 0px;
+      left: 0;
+      top: 0px;
+      background: #486BAB;
+      color: #FFFFFF;
+      z-index: 1;
+    }
         
-.nav-link12:last-child {
-  margin-bottom: 300px; /* Margin for the last navigation link */
-}
-    
-/*  This section targets the last child element with the class "nav-link12" within its container.
-It sets a bottom margin to create spacing at the bottom of the navigation links. */
+    /*  This section targets an element with the class "sidebar12".
+    It styles a sidebar by setting various properties such as display, flex-direction, align-items, padding, width, height, background color, and color.
+    The sidebar is given a fixed position on the left side of the page and has a width of 230 pixels. */
         
-.va-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 750px;
-  padding: 12px 20px;
-  background: #FFFFFF;
-  color: #486BAB;
-  font-family: Fira Sans;
-  position: absolute;
-  top: 0px;
-  width: calc(100% - 270px);
-  left: 230px;
-  height: 45px;
-}
-
-/* CSS class for 'username-symbol' */
-.username-symbol {
-  /* Your styles here */
-  /* For example: */
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-weight: bold;
-  font-family: Fira Sans;
-  color: #007bff;
-}
-
-/* CSS class for 'page-name' */
-.page-name {
-  /* Your styles here */
-  /* For example: */
-  font-size: 24px;
-  font-weight: 600;
-  color: #007bff;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-right: auto;
-  margin-left: 20px;
-}
-    
-.selection-row {
-  display: flex;
-  align-items: center;
-  padding: 20px 40px;
-  gap: 20px;
-  position: absolute;
-  top: 70px;
-  left: 230px;
-  width: calc(100% - 310px);
-  z-index: 1;
-}
-    
-/*  This section targets elements with the class "selection-row".
-It styles rows by setting properties like display, align-items, padding, position, top, left, width, and z-index. */
-
-.selection-row .department select {
-  padding: 8px;
-  font-family: Fira Sans;
-  font-size: 16px;
-  color: #486BAB;
-  border-color: rgba(58, 75, 104, 0.2);
-  width: 200px;
-}
-
-.selection-row .violation select {
-  padding: 8px;
-  font-family: Fira Sans;
-  font-size: 16px;
-  color: #486BAB;
-  border-color: rgba(58, 75, 104, 0.2);
-  width: 200px;
-}
+    .logo12,
+      .nav-link12 {
+        color: #FFFFFF;
+        font-family: Fira Sans;
+        width: 100%;
+        padding: 15px;
+    }
         
-.start-date {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  max-width: 150px;
-}
+      /*  This section targets elements with the classes "logo12" and "nav-link12".
+    It styles the logo and navigation links inside the sidebar.
+    The styles include setting the color, font-family, width, and padding for these elements. */ 
         
-.start-date .react-datepicker__input-container input {
-  padding: 8px 30px 8px 8px; /* Adjust padding for input field */
-  font-family: Fira Sans;
-  text-align: center;
-  text-align-last: center;
-  font-size: 16px;
-  color: #486BAB;
-  border-color: rgba(58, 75, 104, 0.2);
-  width: 100%;
-}
-      
-.start-date .react-datepicker__time-container {
-  position: absolute;
-  top: 0;
-  left: 100%; /* Position the time container to the right of the calendar */
-  margin-left: 0px; /* Adjust the margin to create space between the calendar and time container */
-}
+    .nav-link12 {
+      text-decoration: none;
+    }
         
-.start-date .react-datepicker__time-container .react-datepicker__time {
-  width: 100%;
-}
-    
-.start-date .react-datepicker__time-container .react-datepicker__time-box {
-  width: 100%;
-}
+    .nav-link12:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
         
-.start-date .react-datepicker__time-container .react-datepicker__time-list {
-  padding-left: 0;
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.start-date .react-datepicker__time-container .react-datepicker__time-list .react-datepicker__time-list-item {
-  padding: 5px;
-  cursor: pointer;
-}
+    /*  This section targets the "nav-link12" class when the element is being hovered over.
+    It sets the background color to create a hover effect for the navigation links. */
+            
+    .nav-link12:last-child {
+      margin-bottom: 300px; /* Margin for the last navigation link */
+    }
         
-.start-date .react-datepicker__time-container .react-datepicker__time-list .react-datepicker__time-list-item:hover {
-  background-color: #f0f0f0;
-}
-      
-.start-date .react-datepicker__navigation--next:not(.other-class) {
-  right: 0;
-}        
+    /*  This section targets the last child element with the class "nav-link12" within its container.
+    It sets a bottom margin to create spacing at the bottom of the navigation links. */
+            
+    .va-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 750px;
+      padding: 12px 20px;
+      background: #FFFFFF;
+      color: #486BAB;
+      font-family: Fira Sans;
+      position: absolute;
+      top: 0px;
+      width: calc(100% - 270px);
+      left: 230px;
+      height: 45px;
+    }
     
-.start-date .react-datepicker__navigation--next::before {
-  border-color: transparent transparent transparent #ccc;
-  transform: translateX(50%);
-}               
-      
-.end-date {
-  display: flex;
-  align-items: center;
-  max-width: 150px;
-  margin-left: 10px;
-  margin-right: auto;
-}
-
-.end-date .react-datepicker__input-container input {
-  padding: 8px 8px 8px 8px; /* Adjust padding for input field */
-  font-family: Fira Sans;
-  text-align: center;
-  text-align-last: center;
-  font-size: 16px;
-  color: #486BAB;
-  border-color: rgba(58, 75, 104, 0.2);
-  width: 100%;
-}
-       
-.end-date .react-datepicker__time-container {
-  position: absolute;
-  top: 0;
-  left: 100%; /* Position the time container to the right of the calendar */
-}
-
-.end-date .react-datepicker__navigation--next:not(.other-class) {
-  right: 0;
-}
-
-.va-download-button {
-  padding: 8px 16px;
-  font-family: Fira Sans;
-  font-size: 16px;
-  background-color: #0009ad;
-  color: #fff;
-  border: none;
-  cursor: not-allowed;
-}
+    /* CSS class for 'username-symbol' */
+    .username-symbol {
+      /* Your styles here */
+      /* For example: */
+      margin-bottom: 10px;
+      margin-top: 10px;
+      font-weight: bold;
+      font-family: monaco, monospace;
+      color: #030e70;
+    }
     
-.va-download-button.interactive {
-  cursor: pointer;
-}
-
-.va-reset-button {
-  right: auto;
-  margin-right: 10px;
-  background-color: rgb(149, 0, 255);
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-family: Fira Sans; 
-  font-size: 16px;
-}
+    /* CSS class for 'page-name' */
+    .page-name {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-right: auto;
+      margin-left: 20px;
+      color: #030e70;
+      font-family: monaco, monospace;
+    }
+        
+    .selection-row {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      gap: 20px;
+      position: absolute;
+      top: 70px;
+      left: 230px;
+      width: calc(100% - 310px);
+      z-index: 1;
+    }
+        
+    /*  This section targets elements with the class "selection-row".
+    It styles rows by setting properties like display, align-items, padding, position, top, left, width, and z-index. */
     
-.va-reset-button:hover {
-  background-color: rgb(149, 0, 255);
-}
+    .selection-row .department select {
+      padding: 8px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      color: #486BAB;
+      border-color: rgba(58, 75, 104, 0.2);
+      width: 200px;
+    }
     
-.va-reset-button:active {
-  background-color: rgb(149, 0, 255);
-}
-
-.search-button {
-  padding: 8px 16px;
-  font-family: Fira Sans;
-  font-size: 16px;
-  background-color: #02c118;
-  color: #fff;
-  border: none;
-  cursor: not-allowed;
-}
-
-.search-button.interactive {
-  cursor: pointer;
-}
+    .selection-row .violation select {
+      padding: 8px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      color: #486BAB;
+      border-color: rgba(58, 75, 104, 0.2);
+      width: 200px;
+    }
+            
+    .start-date {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      max-width: 150px;
+    }
+            
+    .start-date .react-datepicker__input-container input {
+      padding: 8px 30px 8px 8px; /* Adjust padding for input field */
+      font-family: Fira Sans;
+      text-align: center;
+      text-align-last: center;
+      font-size: 16px;
+      color: #486BAB;
+      border-color: rgba(58, 75, 104, 0.2);
+      width: 100%;
+    }
+          
+    .start-date .react-datepicker__time-container {
+      position: absolute;
+      top: 0;
+      left: 100%; /* Position the time container to the right of the calendar */
+      margin-left: 0px; /* Adjust the margin to create space between the calendar and time container */
+    }
+            
+    .start-date .react-datepicker__time-container .react-datepicker__time {
+      width: 100%;
+    }
+        
+    .start-date .react-datepicker__time-container .react-datepicker__time-box {
+      width: 100%;
+    }
+            
+    .start-date .react-datepicker__time-container .react-datepicker__time-list {
+      padding-left: 0;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     
-.divider {
-  border-top: 2px solid #486BAB;
-  margin-top: 150px; /* Increase this value to move the divider lower */
-  margin-bottom: 0px; /* Optional: Adjust the bottom margin as needed */
-  margin-left: 245px;
-}
-
-.va-database-table {
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: 600px; /* Adjust the value based on your requirements */
-  margin-left: 260px;
-  margin-right: 10px;
-}
+    .start-date .react-datepicker__time-container .react-datepicker__time-list .react-datepicker__time-list-item {
+      padding: 5px;
+      cursor: pointer;
+    }
+            
+    .start-date .react-datepicker__time-container .react-datepicker__time-list .react-datepicker__time-list-item:hover {
+      background-color: #f0f0f0;
+    }
+          
+    .start-date .react-datepicker__navigation--next:not(.other-class) {
+      right: 0;
+    }        
+        
+    .start-date .react-datepicker__navigation--next::before {
+      border-color: transparent transparent transparent #ccc;
+      transform: translateX(50%);
+    }               
+          
+    .end-date {
+      display: flex;
+      align-items: center;
+      max-width: 150px;
+      margin-left: 10px;
+      margin-right: auto;
+    }
     
-.va-database-table table {
-  width: 100%; /* Adjust the width as desired */
-  margin: 0px;
-  border-collapse: collapse;
-  border: 2px solid #061737;
-}
+    .end-date .react-datepicker__input-container input {
+      padding: 8px 8px 8px 8px; /* Adjust padding for input field */
+      font-family: Fira Sans;
+      text-align: center;
+      text-align-last: center;
+      font-size: 16px;
+      color: #486BAB;
+      border-color: rgba(58, 75, 104, 0.2);
+      width: 100%;
+    }
+           
+    .end-date .react-datepicker__time-container {
+      position: absolute;
+      top: 0;
+      left: 100%; /* Position the time container to the right of the calendar */
+    }
     
-.va-database-table th {
-  background-color: #73a0f3;
-  color: #061737 !important; /* Set the text color for table headers to dark blue */
-  font-weight: bold;
-  padding: 8px; /* Adjust the padding as desired */
-  text-align: center;
-}
-
-.va-database-table td {
-  background-color: #ececec;
-  padding: 8px; /* Adjust the padding as desired */
-  border-bottom: 1px solid #486BAB;
-  text-align: center;
-  color: #061737 !important; /* Set the text color for table cells to dark blue */
-}
+    .end-date .react-datepicker__navigation--next:not(.other-class) {
+      right: 0;
+    }
     
-.va-database-table th:last-child {
-  border-right: 2px solid #061737;
-}
+    .va-download-button {
+      padding: 8px 16px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      background-color: #0009ad;
+      color: #fff;
+      border: none;
+      cursor: not-allowed;
+    }
+        
+    .va-download-button.interactive {
+      cursor: pointer;
+    }
     
-.va-database-table td:last-child {
-  border-right: 2px solid #061737;
-}
-
-.va-database-table td .va-open-button.open {
-  background-color: #ff0000;
-}
-
-.va-database-table td .va-open-button.close {
-  background-color: #02c118;
-}
-
-/* Dark mode specific styles */
-@media (prefers-color-scheme: dark) {
-  .va-database-table th,
-  .va-database-table td {
-    color: #FFFFFF; /* Set the text color to white for dark mode */
-  }
-}
-
-.va-open-button {
-  padding: 6px 10px;
-  font-size: 14px;
-  border: none;
-  background-color: #3498db;
-  color: white;
-  cursor: pointer;
-}
-
-.va-open-button[disabled] {
-  background-color: #aaa;
-  cursor: default;
-}
-
-/* Styles for the pop-up form */
-.form-modal {
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  color: #fff;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-field {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.form-label {
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.form-control {
-  background-color: #486BAB;
-  color: #061737;
-}
-
-.form-check-label {
-  color: #fff;
-}
-
-.form-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.form-buttons button {
-  background-color: #d3d3d3;
-  color: #000;
-  margin-right: 10px;
-}
-
-.form-buttons button:last-child {
-  margin-right: 0;
-}
-
-.form-modal-body {
-  display: flex;
-  align-items: left;
-  justify-content: center;
-}
-
-.form-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 320px;
-  margin-top: 0px;
-}
-
-.modal-title {
-  display: block;
-  text-align: center;
-  background-color: black;
-  color: #486BAB;
-  padding: 10px;
-  position: absolute;
-  top: 29.6%; /* Move the title down to the vertical center */
-  right: 50%;
-  transform: translate(50%, -50%); /* Center the title both vertically and horizontally */
-  border: 2px solid #486BAB; /* Add a 2px solid border with the color #486BAB */
-}
-
-.form-modal-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-
-.va-database-table-footer {
-  position:relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 20px;
-  margin-top: 10px;
-  margin-left: 200px;
-}
-
-.va-database-table-footer button {
-  margin: 0 5px;
-  padding: 5px 10px;
-  border: none;
-  background-color: #f8f9fa;
-  cursor: pointer;
-}
-
-.va-database-table-footer button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.va-database-table-footer .pagination-text {
-  margin: 0 10px;
-  font-weight: bold;
-}
+    .va-reset-button {
+      right: auto;
+      margin-right: 10px;
+      background-color: rgb(149, 0, 255);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-family: Fira Sans; 
+      font-size: 16px;
+    }
+        
+    .va-reset-button:hover {
+      background-color: rgb(149, 0, 255);
+    }
+        
+    .va-reset-button:active {
+      background-color: rgb(149, 0, 255);
+    }
+    
+    .search-button {
+      padding: 8px 16px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      background-color: #02c118;
+      color: #fff;
+      border: none;
+      cursor: not-allowed;
+    }
+    
+    .search-button.interactive {
+      cursor: pointer;
+    }
+        
+    .divider {
+      border-top: 2px solid #486BAB;
+      margin-top: 150px; /* Increase this value to move the divider lower */
+      margin-bottom: 0px; /* Optional: Adjust the bottom margin as needed */
+      margin-left: 245px;
+    }
+    
+    .va-database-table {
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 600px; /* Adjust the value based on your requirements */
+      margin-left: 260px;
+      margin-right: 10px;
+    }
+        
+    .va-database-table table {
+      width: 100%; /* Adjust the width as desired */
+      margin: 0px;
+      border-collapse: collapse;
+      border: 2px solid #061737;
+    }
+        
+    .va-database-table th {
+      background-color: #73a0f3;
+      color: #061737 !important; /* Set the text color for table headers to dark blue */
+      font-weight: bold;
+      padding: 8px; /* Adjust the padding as desired */
+      text-align: center;
+    }
+    
+    .va-database-table td {
+      background-color: #ececec;
+      padding: 8px; /* Adjust the padding as desired */
+      border-bottom: 1px solid #486BAB;
+      text-align: center;
+      color: #061737 !important; /* Set the text color for table cells to dark blue */
+    }
+        
+    .va-database-table th:last-child {
+      border-right: 2px solid #061737;
+    }
+        
+    .va-database-table td:last-child {
+      border-right: 2px solid #061737;
+    }
+    
+    .va-database-table td .va-open-button.open {
+      background-color: #ff0000;
+    }
+    
+    .va-database-table td .va-open-button.close {
+      background-color: #02c118;
+    }
+    
+    /* Dark mode specific styles */
+    @media (prefers-color-scheme: dark) {
+      .va-database-table th,
+      .va-database-table td {
+        color: #FFFFFF; /* Set the text color to white for dark mode */
+      }
+    }
+    
+    .va-open-button {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .va-open-button[disabled] {
+      background-color: #aaa;
+      cursor: default;
+    }
+    
+    /* Styles for the pop-up form */
+    .form-modal {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #fff;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .form-label {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    .form-control {
+      background-color: #486BAB;
+      color: #061737;
+    }
+    
+    .form-check-label {
+      color: #fff;
+    }
+    
+    .form-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .form-buttons button {
+      background-color: #d3d3d3;
+      color: #000;
+      margin-right: 10px;
+    }
+    
+    .form-buttons button:last-child {
+      margin-right: 0;
+    }
+    
+    .form-modal-body {
+      display: flex;
+      align-items: left;
+      justify-content: center;
+    }
+    
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 320px;
+      margin-top: 0px;
+    }
+    
+    .modal-title {
+      display: block;
+      text-align: center;
+      background-color: black;
+      color: #486BAB;
+      padding: 10px;
+      position: absolute;
+      top: 29.6%; /* Move the title down to the vertical center */
+      right: 50%;
+      transform: translate(50%, -50%); /* Center the title both vertically and horizontally */
+      border: 2px solid #486BAB; /* Add a 2px solid border with the color #486BAB */
+    }
+    
+    .form-modal-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+    
+    .va-database-table-footer {
+      position:relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 20px;
+      margin-top: 10px;
+      margin-left: 200px;
+    }
+    
+    .va-database-table-footer button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #f8f9fa;
+      cursor: pointer;
+    }
+    
+    .va-database-table-footer button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    
+    .va-database-table-footer .pagination-text {
+      margin: 0 10px;
+      font-weight: bold;
+    }
