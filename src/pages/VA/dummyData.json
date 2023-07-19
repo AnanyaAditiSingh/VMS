@@ -1,213 +1,454 @@
 [
     {
-      "serialNumber": 1,
-      "image": "Image 1",
-      "cameraName": "Camera Name 1",
-      "process": "Process 1",
-      "dateTime": "YYYY-MM-DD/00:00:00-1"
+        "serialNumber": 1,
+        "image": "Image 1",
+        "cameraName": "Camera Name 1",
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-1",
+        "violations": {
+          "Helmet": 0,
+          "Vest": 2,
+          "Harness": 0,
+          "Gloves": 3,
+          "Goggles": 4,
+          "Hazardous": 1
+        }
     },
     {
       "serialNumber": 2,
       "image": "Image 2",
       "cameraName": "Camera Name 2",
-      "process": "Process 2",
-      "dateTime": "YYYY-MM-DD/00:00:00-2"
+      "action": " ",
+      "dateTime": "YYYY-MM-DD/00:00:00-2",
+      "violations": {
+        "Helmet": 1,
+        "Vest": 5,
+        "Harness": 4,
+        "Gloves": 0,
+        "Goggles": 2,
+        "Hazardous": 0
+      }
     },
     {
         "serialNumber": 3,
         "image": "Image 3",
         "cameraName": "Camera Name 3",
-        "process": "Process 3",
-        "dateTime": "YYYY-MM-DD/00:00:00-3"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-3",
+        "violations": {
+            "Helmet": 3,
+            "Vest": 1,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 4,
         "image": "Image 4",
         "cameraName": "Camera Name 4",
-        "process": "Process 4",
-        "dateTime": "YYYY-MM-DD/00:00:00-4"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-4",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 4,
+            "Harness": 3,
+            "Gloves": 3,
+            "Goggles": 2,
+            "Hazardous": 0
+          }
     },
     {
         "serialNumber": 5,
         "image": "Image 5",
         "cameraName": "Camera Name 5",
-        "process": "Process 5",
-        "dateTime": "YYYY-MM-DD/00:00:00-5"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-5",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 0,
+            "Harness": 0,
+            "Gloves": 2,
+            "Goggles": 3,
+            "Hazardous": 2
+          }
     },
     {
         "serialNumber": 6,
         "image": "Image 6",
         "cameraName": "Camera Name 6",
-        "process": "Process 6",
-        "dateTime": "YYYY-MM-DD/00:00:00-6"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-6",
+        "violations": {
+            "Helmet": 4,
+            "Vest": 4,
+            "Harness": 4,
+            "Gloves": 4,
+            "Goggles": 0,
+            "Hazardous": 4
+          }
     },
     {
         "serialNumber": 7,
         "image": "Image 7",
         "cameraName": "Camera Name 7",
-        "process": "Process 7",
-        "dateTime": "YYYY-MM-DD/00:00:00-7"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-7",
+        "violations": {
+            "Helmet": 2,
+            "Vest": 2,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 2,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 8,
         "image": "Image 8",
         "cameraName": "Camera Name 8",
-        "process": "Process 8",
-        "dateTime": "YYYY-MM-DD/00:00:00-8"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-8",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 2,
+            "Harness": 0,
+            "Gloves": 5,
+            "Goggles": 4,
+            "Hazardous": 5
+          }
     },
     {
         "serialNumber": 9,
         "image": "Image 9",
         "cameraName": "Camera Name 9",
-        "process": "Process 9",
-        "dateTime": "YYYY-MM-DD/00:00:00-9"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-9",
+        "violations": {
+            "Helmet": 1,
+            "Vest": 1,
+            "Harness": 1,
+            "Gloves": 1,
+            "Goggles": 4,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 10,
         "image": "Image 10",
         "cameraName": "Camera Name 10",
-        "process": "Process 10",
-        "dateTime": "YYYY-MM-DD/00:00:00-10"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-10",
+        "violations": {
+            "Helmet": 2,
+            "Vest": 2,
+            "Harness": 2,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 0
+          }
     },
     {
         "serialNumber": 11,
         "image": "Image 11",
         "cameraName": "Camera Name 11",
-        "process": "Process 11",
-        "dateTime": "YYYY-MM-DD/00:00:00-11"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-11",
+        "violations": {
+            "Helmet": 1,
+            "Vest": 2,
+            "Harness": 3,
+            "Gloves": 4,
+            "Goggles": 5,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 12,
         "image": "Image 12",
         "cameraName": "Camera Name 12",
-        "process": "Process 12",
-        "dateTime": "YYYY-MM-DD/00:00:00-12"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-12",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 0,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 1
+          }
+
     },
     {
         "serialNumber": 13,
         "image": "Image 13",
         "cameraName": "Camera Name 13",
-        "process": "Process 13",
-        "dateTime": "YYYY-MM-DD/00:00:00-13"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-13",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 4,
+            "Harness": 0,
+            "Gloves": 4,
+            "Goggles": 4,
+            "Hazardous": 1
+          }
     },
     {
       "serialNumber": 14,
       "image": "Image 14",
       "cameraName": "Camera Name 14",
-      "process": "Process 14",
-      "dateTime": "YYYY-MM-DD/00:00:00-14"
+      "action": " ",
+      "dateTime": "YYYY-MM-DD/00:00:00-14",
+      "violations": {
+        "Helmet": 0,
+        "Vest": 3,
+        "Harness": 0,
+        "Gloves": 3,
+        "Goggles": 0,
+        "Hazardous": 3
+      }
     },
     {
         "serialNumber": 15,
         "image": "Image 15",
         "cameraName": "Camera Name 15",
-        "process": "Process 15",
-        "dateTime": "YYYY-MM-DD/00:00:00-15"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-15",
+        "violations": {
+            "Helmet": 2,
+            "Vest": 2,
+            "Harness": 2,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 16,
         "image": "Image 16",
         "cameraName": "Camera Name 16",
-        "process": "Process 16",
-        "dateTime": "YYYY-MM-DD/00:00:00-16"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-16",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 5,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 5,
+            "Hazardous": 0
+          }
     },
     {
         "serialNumber": 17,
         "image": "Image 17",
         "cameraName": "Camera Name 17",
-        "process": "Process 17",
-        "dateTime": "YYYY-MM-DD/00:00:00-17"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-17",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 4,
+            "Harness": 4,
+            "Gloves": 4,
+            "Goggles": 4,
+            "Hazardous": 3
+          }
     },
     {
         "serialNumber": 18,
         "image": "Image 18",
         "cameraName": "Camera Name 18",
-        "process": "Process 18",
-        "dateTime": "YYYY-MM-DD/00:00:00-18"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-18",
+        "violations": {
+            "Helmet": 1,
+            "Vest": 0,
+            "Harness": 0,
+            "Gloves": 3,
+            "Goggles": 0,
+            "Hazardous": 0
+          }
     },
     {
         "serialNumber": 19,
         "image": "Image 19",
         "cameraName": "Camera Name 19",
-        "process": "Process 19",
-        "dateTime": "YYYY-MM-DD/00:00:00-19"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-19",
+        "violations": {
+            "Helmet": 1,
+            "Vest": 0,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 0
+          }
     },
     {
         "serialNumber": 20,
         "image": "Image 20",
         "cameraName": "Camera Name 20",
-        "process": "Process 20",
-        "dateTime": "YYYY-MM-DD/00:00:00-20"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-20",
+        "violations": {
+            "Helmet": 1,
+            "Vest": 1,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 0
+          }
     },
     {
         "serialNumber": 21,
         "image": "Image 21",
         "cameraName": "Camera Name 21",
-        "process": "Process 21",
-        "dateTime": "YYYY-MM-DD/00:00:00-21"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-21",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 2,
+            "Harness": 0,
+            "Gloves": 4,
+            "Goggles": 4,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 22,
         "image": "Image 22",
         "cameraName": "Camera Name 22",
-        "process": "Process 22",
-        "dateTime": "YYYY-MM-DD/00:00:00-22"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-22",
+        "violations": {
+            "Helmet": 3,
+            "Vest": 3,
+            "Harness": 0,
+            "Gloves": 3,
+            "Goggles": 0,
+            "Hazardous": 0
+          }
     },
     {
         "serialNumber": 23,
         "image": "Image 23",
         "cameraName": "Camera Name 23",
-        "process": "Process 23",
-        "dateTime": "YYYY-MM-DD/00:00:00-23"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-23",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 5,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 24,
         "image": "Image 24",
         "cameraName": "Camera Name 24",
-        "process": "Process 24",
-        "dateTime": "YYYY-MM-DD/00:00:00-24"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-24",
+        "violations": {
+            "Helmet": 2,
+            "Vest": 2,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 25,
         "image": "Image 25",
         "cameraName": "Camera Name 25",
-        "process": "Process 25",
-        "dateTime": "YYYY-MM-DD/00:00:00-25"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-25",
+        "violations": {
+            "Helmet": 2,
+            "Vest": 2,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 2
+          }
     },
     {
         "serialNumber": 26,
         "image": "Image 26",
         "cameraName": "Camera Name 26",
-        "process": "Process 26",
-        "dateTime": "YYYY-MM-DD/00:00:00-26"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-26",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 2,
+            "Harness": 0,
+            "Gloves": 3,
+            "Goggles": 3,
+            "Hazardous": 3
+          }
     },
     {
         "serialNumber": 27,
         "image": "Image 27",
         "cameraName": "Camera Name 27",
-        "process": "Process 27",
-        "dateTime": "YYYY-MM-DD/00:00:00-27"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-27",
+        "violations": {
+            "Helmet": 4,
+            "Vest": 0,
+            "Harness": 0,
+            "Gloves": 3,
+            "Goggles": 4,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 28,
         "image": "Image 28",
         "cameraName": "Camera Name 28",
-        "process": "Process 28",
-        "dateTime": "YYYY-MM-DD/00:00:00-28"
+        "process": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-28",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 0,
+            "Harness": 0,
+            "Gloves": 0,
+            "Goggles": 0,
+            "Hazardous": 1
+          }
     },
     {
         "serialNumber": 29,
         "image": "Image 29",
         "cameraName": "Camera Name 29",
-        "process": "Process 29",
-        "dateTime": "YYYY-MM-DD/00:00:00-29"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-29",
+        "violations": {
+            "Helmet": 0,
+            "Vest": 5,
+            "Harness": 0,
+            "Gloves": 5,
+            "Goggles": 0,
+            "Hazardous": 5
+          }
     },
     {
         "serialNumber": 30,
         "image": "Image 30",
         "cameraName": "Camera Name 30",
-        "process": "Process 30",
-        "dateTime": "YYYY-MM-DD/00:00:00-30"
+        "action": " ",
+        "dateTime": "YYYY-MM-DD/00:00:00-30",
+        "violations": {
+            "Helmet": 1,
+            "Vest": 1,
+            "Harness": 1,
+            "Gloves": 1,
+            "Goggles": 1,
+            "Hazardous": 1
+          }
     }
   ]
   

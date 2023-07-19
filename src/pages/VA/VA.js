@@ -104,6 +104,16 @@ const VA = () => {
     navigate("/login");
   };
 
+  const renderViolationsList = (violations) => {
+    return (
+      <ul className="violations-list">
+        {Object.entries(violations).map(([violation, count]) =>
+          count > 0 ? <li key={violation}>{`${violation}: ${count}`}</li> : null
+        )}
+      </ul>
+    );
+  };
+
   const toggleButton = (serialNumber) => {
     setButtonStatus((prevState) => ({
       ...prevState,
@@ -262,25 +272,19 @@ const VA = () => {
               <th>CAMERA NAME</th>
               <th>DATE & TIME</th>
               <th>VIOLATIONS</th>
-              <th>PROCESS</th>
+              <th>ACTION</th>
               <th>OPEN/CLOSE</th>
             </tr>
           </thead>
           <tbody>
             {getPageData().map((item) => (
-              <tr key={item.serialNumber}>
+                <tr key={item.serialNumber}>
                 <td>{item.serialNumber}</td>
                 <td>{item.image}</td>
                 <td>{item.cameraName}</td>
                 <td>{item.dateTime}</td>
-                <td>
-                  <ul className="violations-list">
-                    <li>Helmet: {item.serialNumber % 2 === 0 ? 1 : 0}</li>
-                    <li>Vest: {item.serialNumber % 3 === 0 ? 1 : 0}</li>
-                    <li>Harness: {item.serialNumber % 4 === 0 ? 1 : 0}</li>
-                  </ul>
-                </td>
-                <td>{item.process}</td>
+                <td>{renderViolationsList(item.violations)}</td>
+                <td>{item.action}</td>
                 <td>
                   <button
                     disabled={!buttonStatus[item.serialNumber]}

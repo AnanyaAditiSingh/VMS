@@ -331,14 +331,14 @@ It styles rows by setting properties like display, align-items, padding, positio
 }
 
 .va-database-table td .va-open-button.close {
-  background-color: #00ff00;
+  background-color: #02c118;
 }
 
 /* Dark mode specific styles */
 @media (prefers-color-scheme: dark) {
   .va-database-table th,
   .va-database-table td {
-    color: #FFFFFF !important; /* Set the text color to white for dark mode */
+    color: #FFFFFF; /* Set the text color to white for dark mode */
   }
 }
 
