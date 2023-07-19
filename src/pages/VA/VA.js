@@ -8,6 +8,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import departmentsData from './departments.json';
 import violationsData from './violations.json';
+import violationsDropdownData from './violations-dropdown.json';
 import SearchButton from "./SearchButton";
 import DownloadButton from "./DownloadButton";
 
@@ -19,6 +20,7 @@ const VA = () => {
   const [selectedEndDateTime, setSelectedEndDateTime] = useState(null);
   const [departments, setDepartments] = useState([]);
   const [selectedDepartment, setSelectedDepartment] = useState("");
+  const [violationsDropdown, setViolationsDropdown] = useState([]);
   const [selectedViolation, setSelectedViolation] = useState("");
   const [isSearchInteractive, setIsSearchInteractive] = useState(false);
   const [isDownloadInteractive, setIsDownloadInteractive] = useState(false);
@@ -60,6 +62,10 @@ const VA = () => {
       initialButtonStatus[data.serialNumber] = true;
     });
     setButtonStatus(initialButtonStatus);
+  }, []);
+
+  useEffect(() => {
+    setViolationsDropdown(violationsDropdownData);
   }, []);
 
   const handleDownloadButtonClick = () => {
@@ -212,7 +218,7 @@ const VA = () => {
               onChange={(e) => setSelectedViolation(e.target.value)}
             >
               <option value="">Select Violation</option>
-              {violationsData.map((violation, index) => (
+              {violationsDropdown.map((violation, index) => (
                 <option key={index} value={violation}>
                   {violation}
                 </option>
