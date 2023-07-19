@@ -14,7 +14,6 @@ import DownloadButton from "./DownloadButton";
 const VA = () => {
   const navigate = useNavigate();
   const [authenticated, setAuthenticated] = useState(false);
-  const [newVideoSource, setNewVideoSource] = useState("");
   const [data, setData] = useState([]);
   const [selectedDateTime, setSelectedDateTime] = useState(null);
   const [selectedEndDateTime, setSelectedEndDateTime] = useState(null);
@@ -31,6 +30,7 @@ const VA = () => {
   const [formViolation, setFormViolation] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(30);
+  const [nameSurname, setNameSurname] = useState("NAME SURNAME");
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("authenticated");
@@ -102,6 +102,7 @@ const VA = () => {
     localStorage.setItem("authenticated", false);
     setAuthenticated(false);
     navigate("/login");
+    setNameSurname("NAME SURNAME"); // Reset the "NAME SURNAME" value when logging out
   };
 
   const renderViolationsList = (violations) => {
@@ -136,7 +137,7 @@ const VA = () => {
       if (item.serialNumber === selectedButtonId) {
         return {
           ...item,
-          action: formName + " - " + formViolation,
+          action: nameSurname + " : " + formViolation,
         };
       }
       return item;
@@ -183,14 +184,14 @@ const VA = () => {
         <button onClick={handleLogout}>Logout</button>
       </div>
       <div className="va-container">
-      <div class="va-header">
-        <div class="page-name">
-          <h1>Video Analytics</h1>
+        <div class="va-header">
+          <div class="page-name">
+            <h1>Video Analytics</h1>
+          </div>
+          <div class="username-symbol">
+            {nameSurname} {/* Display the "NAME SURNAME" value in the header */}
+          </div>
         </div>
-        <div class="username-symbol">
-          NAME SURNAME
-        </div>
-      </div>
         <div className="selection-row">
           <div className="department">
             <select
@@ -342,17 +343,15 @@ const VA = () => {
           </Modal.Header>
           <Modal.Body>
             <Form className="form-modal">
-              <Form.Group className="form-group">
-                <Form.Label className="form-label">Name</Form.Label>
-                <Form.Control
-                  className="form-control"
-                  type="text"
-                  placeholder="Enter Name"
-                  maxLength={40}
-                  value={formName}
-                  onChange={(e) => setFormName(e.target.value)}
-                />
-              </Form.Group>
+              <div className="form-group">
+                {/* Wrap the label and the "NAME SURNAME" component in a container */}
+                <div className="form-field">
+                  <Form.Label className="form-label">Name</Form.Label>
+                  <div className="form-control empty-box">
+                    {nameSurname} {/* Display the "NAME SURNAME" value in the empty box shell */}
+                  </div>
+                </div>
+              </div>
               <Form.Group className="form-group">
                 <Form.Label className="form-label">Actions: </Form.Label>
                 {violationsData.map((violation, index) => (

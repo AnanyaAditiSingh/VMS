@@ -371,14 +371,20 @@ It styles rows by setting properties like display, align-items, padding, positio
   margin-bottom: 20px;
 }
 
+.form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .form-label {
-  margin-bottom: 5px;
+  margin-right: 10px;
   font-weight: bold;
 }
 
 .form-control {
-  background-color: rgb(161, 150, 150);
-  color: #fff;
+  background-color: #486BAB;
+  color: #061737;
 }
 
 .form-check-label {
