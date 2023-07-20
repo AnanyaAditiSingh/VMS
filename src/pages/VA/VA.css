@@ -380,8 +380,8 @@ body {
     }
     
     .form-control {
-      background-color: #486BAB;
-      color: #061737;
+      background-color: rgb(0, 0, 0);
+      color: #00bbff !important;
     }
     
     .form-check-label {
