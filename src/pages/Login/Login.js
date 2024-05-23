@@ -10,7 +10,7 @@ const Login = () => {
   const [authenticated, setAuthenticated] = useState(
     localStorage.getItem("authenticated") === "true"
   );
-  const users = [{ username: "", password: "" }];
+  const users = [{ username: "admin", password: "password123" }];
 
   // Check if the user is already authenticated
   useEffect(() => {
@@ -37,21 +37,21 @@ const Login = () => {
 
   // Render the login form
   return (
-      <div className="login-wrapper">
-        <h1>Please Log In</h1>
-        <form onSubmit={handleSubmit}>
-          <label>
-            <p>Username</p>
-            <input type="text" name="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
-          </label>
-          <label>
-            <p>Password</p>
-            <input type="password" name="Password" onChange={(e) => setPassword(e.target.value)} />
-          </label>
-          <div>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
+    <div className="login-wrapper">
+      <h1>Please Log In</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          <p>Username</p>
+          <input type="text" name="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+        </label>
+        <label>
+          <p>Password</p>
+          <input type="password" name="Password" onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
     </div>
   );
 };

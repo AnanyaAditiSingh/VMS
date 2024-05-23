@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Modal, Form, Button } from "react-bootstrap";
-import logo from "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/assets/imgs/logo.png";
-import "/Users/mac/Desktop/VMS/react/frontend-backend/VMS/src/pages/VA/VA.css";
+import logo from "/Users/ananyaaditisingh/Desktop/juno/code/VMS/src/assets/imgs/logo.png";
+import "/Users/ananyaaditisingh/Desktop/juno/code/VMS/src/pages/VA/VA.css";
 import dummyData from './dummyData.json';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
